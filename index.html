@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Eco Store</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			body {
+				background: rgb(180, 193, 126);
+				background: radial-gradient(
+					circle,
+					rgba(180, 193, 126, 1) 0%,
+					rgba(157, 185, 155, 1) 72%,
+					rgba(213, 210, 196, 1) 99%
+				);
+			}
+			#bestsellers {
+				background-color: #d5d2c4 !important;
+			}
+			@font-face {
+				font-family: "Meisha Nagita";
+				src: url("./public/fonts/meishanagitaregular-ogo9p.otf")
+					format("opentype");
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			#main-title {
+				font-family: "Meisha Nagita", sans-serif;
+				text-align: center;
+			}
+
+			@keyframes gradientAnimation {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+			/* Animations */
+			@keyframes fadeInUp {
+				0% {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+			.animate-fadeInUp {
+				animation: fadeInUp 1s ease-in-out;
+			}
+		</style>
+	</head>
+	<body class="text-white">
+		<!-- Navbar -->
+		<nav class="bg-green-700 bg-opacity-70 top-0 z-10">
+			<div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 z-10">
+				<div class="flex justify-between h-16">
+					<div class="flex-shrink-0 flex items-center">
+						<span class="text-2xl font-bold">Eco Store</span>
+					</div>
+					<div
+						class="hidden md:flex space-x-8 flex items-center justify-center"
+					>
+						<a href="#" class="text-white hover:text-green-300">Home</a>
+						<a href="#" class="text-white hover:text-green-300">Features</a>
+						<a href="#" class="text-white hover:text-green-300">Best Sellers</a>
+						<a href="#" class="text-white hover:text-green-300">Contact</a>
+					</div>
+					<div class="flex md:hidden items-center">
+						<button
+							id="menu-button"
+							class="text-white hover:text-green-300 focus:outline-none"
+						>
+							<svg
+								class="h-6 w-6"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M4 6h16M4 12h16m-7 6h7"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="hidden md:hidden">
+				<a
+					href="#"
+					class="block px-4 py-2 text-base font-medium text-white hover:bg-green-500"
+					>Home</a
+				>
+				<a
+					href="#"
+					class="block px-4 py-2 text-base font-medium text-white hover:bg-green-500"
+					>Features</a
+				>
+				<a
+					href="#"
+					class="block px-4 py-2 text-base font-medium text-white hover:bg-green-500"
+					>Best Sellers</a
+				>
+				<a
+					href="#"
+					class="block px-4 py-2 text-base font-medium text-white hover:bg-green-500"
+					>Contact</a
+				>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="home" class="relative p-6 mt-8 md:p-10 animate-fadeInUp">
+			<div
+				class="flex flex-col items-center justify-center w-full mx-auto md:flex-row"
+			>
+				<div
+					class="flex flex-col items-center justify-center w-full space-y-6 md:w-1/2"
+				>
+					<h1
+						id="main-title"
+						class="pt-6 text-4xl font-bold leading-tight text-center md:pt-10 md:text-7xl animate-fadeInUp"
+					>
+						Discover the Eco Living
+					</h1>
+					<p class="text-lg text-center md:text-xl animate-fadeInUp">
+						Join our community and make a positive impact on the planet with
+						eco-friendly products.
+					</p>
+					<div class="w-full mt-6 animate-fadeInUp md:mt-10 md:w-3/4">
+						<img
+							src="./public/images/eco-store.jpg"
+							alt="Eco Products"
+							class="rounded-lg shadow-lg"
+						/>
+					</div>
+					<button
+						class="w-full h-12 px-4 text-lg text-white bg-lime-600 rounded-full md:w-64 md:h-16 md:px-6  md:text-xl hover:bg-green-700 transition animate-fadeInUp"
+					>
+						Shop Now
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Product Features -->
+		<section
+			id="features"
+			class="py-10 px-4 animate-fadeInUp md:py-16 md:px-0 max-w-7xl mx-auto"
+		>
+			<h2 class="mb-8 text-3xl font-semibold text-center md:mb-10 md:text-4xl">
+				Why Choose Us?
+			</h2>
+			<div class="grid gap-8 md:grid-cols-3">
+				<div class="text-center">
+					<img
+						src="./public/images/eco-bag.jpg"
+						alt="Feature 1"
+						class="mx-auto mb-4"
+					/>
+					<h3 class="text-xl font-bold md:text-2xl">Eco-Friendly</h3>
+					<p class="mt-2">
+						Our products are made with the environment in mind, ensuring
+						sustainability.
+					</p>
+				</div>
+				<div class="text-center">
+					<img
+						src="./public/images/ecologic-kit.jpg"
+						alt="Feature 2"
+						class="mx-auto mb-4"
+					/>
+					<h3 class="text-xl font-bold md:text-2xl">Quality Guaranteed</h3>
+					<p class="mt-2">
+						We offer top-quality products that are safe for you and the
+						environment.
+					</p>
+				</div>
+				<div class="text-center">
+					<img
+						src="./public/images/community.jpg"
+						alt="Feature 3"
+						class="mx-auto mb-4"
+					/>
+					<h3 class="text-xl font-bold md:text-2xl">Community Driven</h3>
+					<p class="mt-2">
+						Join our eco-conscious community and contribute to a sustainable
+						future.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Best Sellers -->
+		<section
+			id="bestsellers"
+			class="py-10 px-4 animate-fadeInUp md:py-16 md:px-0"
+		>
+			<div class="max-w-7xl mx-auto">
+				<h2
+					class="mb-8 text-3xl font-semibold text-center md:mb-10 md:text-4xl"
+				>
+					Best Sellers
+				</h2>
+
+				<div class="relative">
+					<!-- Carousel Container -->
+					<div
+						id="carousel"
+						class="flex overflow-x-auto gap-8 snap-x snap-mandatory scroll-smooth md:space-x-2"
+					>
+						<!-- Product Card 1 -->
+						<div
+							class="flex-shrink-0 w-64 md:w-72 snap-center bg-white border rounded-lg shadow-lg"
+						>
+							<img
+								src="./public/images/tote-bag.jpg"
+								alt="Product 1"
+								class="w-full"
+							/>
+							<div class="p-4">
+								<h3 class="text-xl font-bold text-lime-900 md:text-2xl">
+									Organic Cotton Bag
+								</h3>
+								<p class="mt-2 text-lime-900">$15.99</p>
+								<button
+									class="w-full px-4 py-2 mt-4 text-white transition bg-lime-600 rounded-full hover:bg-green-700"
+								>
+									Add to Cart
+								</button>
+							</div>
+						</div>
+
+						<!-- Product Card 2 -->
+						<div
+							class="flex-shrink-0 w-64 md:w-72 snap-center bg-white border rounded-lg shadow-lg"
+						>
+							<img
+								src="./public/images/toothbrush.jpg"
+								alt="Product 2"
+								class="w-full"
+							/>
+							<div class="p-4">
+								<h3 class="text-xl font-bold text-lime-900 md:text-2xl">
+									Bamboo Toothbrush
+								</h3>
+								<p class="mt-2 text-lime-900">$4.99</p>
+								<button
+									class="w-full px-4 py-2 mt-4 text-white transition bg-lime-600 rounded-full hover:bg-green-700"
+								>
+									Add to Cart
+								</button>
+							</div>
+						</div>
+
+						<!-- Product Card 3 -->
+						<div
+							class="flex-shrink-0 w-64 md:w-72 snap-center bg-white border rounded-lg shadow-lg"
+						>
+							<img
+								src="./public/images/brushes.jpg"
+								alt="Product 3"
+								class="w-full"
+							/>
+							<div class="p-4">
+								<h3 class="text-xl font-bold text-lime-900 md:text-2xl">
+									Makeup Brushes
+								</h3>
+								<p class="mt-2 text-lime-900">$29.99</p>
+								<button
+									class="w-full px-4 py-2 mt-4 text-white transition bg-lime-600 rounded-full hover:bg-green-700"
+								>
+									Add to Cart
+								</button>
+							</div>
+						</div>
+
+						<!-- Product Card 4 -->
+						<div
+							class="flex-shrink-0 w-64 md:w-72 snap-center bg-white border rounded-lg shadow-lg"
+						>
+							<img
+								src="./public/images/soap.jpg"
+								alt="Product 4"
+								class="w-full"
+							/>
+							<div class="p-4">
+								<h3 class="text-xl font-bold text-lime-900 md:text-2xl">
+									Biodegradable Soap
+								</h3>
+								<p class="mt-2 text-lime-900">$7.99</p>
+								<button
+									class="w-full px-4 py-2 mt-4 text-white transition bg-lime-600 rounded-full hover:bg-green-700"
+								>
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Navigation Buttons -->
+					<button
+						id="prevButton"
+						class="absolute md:hidden rounded-full left-0 top-1/2 transform -translate-y-1/2 p-2 bg-lime-600 rounded-full text-white hover:bg-green-700 transition"
+					>
+						&#10094;
+					</button>
+					<button
+						id="nextButton"
+						class="absolute md:hidden rounded-full right-0 top-1/2 transform -translate-y-1/2 p-2 bg-lime-600 rounded-full text-white hover:bg-green-700 transition"
+					>
+						&#10095;
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			// Carousel navigation logic
+			const carousel = document.getElementById("carousel");
+			const prevButton = document.getElementById("prevButton");
+			const nextButton = document.getElementById("nextButton");
+
+			prevButton.addEventListener("click", () => {
+				carousel.scrollBy({
+					left: -carousel.offsetWidth,
+					behavior: "smooth",
+				});
+			});
+
+			nextButton.addEventListener("click", () => {
+				carousel.scrollBy({
+					left: carousel.offsetWidth,
+					behavior: "smooth",
+				});
+			});
+			const menuButton = document.getElementById("menu-button");
+			const mobileMenu = document.getElementById("mobile-menu");
+
+			menuButton.addEventListener("click", () => {
+				mobileMenu.classList.toggle("hidden");
+			});
+		</script>
+
+		<!-- Footer -->
+		<footer
+			id="contact"
+			class="py-10 px-4 text-white bg-green-800 animate-fadeInUp md:px-0"
+		>
+			<div
+				class="flex flex-col items-center justify-between max-w-7xl mx-auto md:flex-row"
+			>
+				<div class="text-center md:text-left">
+					<h3 class="text-xl font-bold">Eco Store</h3>
+					<p class="mt-2">
+						Promoting sustainable living one product at a time.
+					</p>
+				</div>
+				<div class="flex mt-6 space-x-6 md:mt-0">
+					<a href="#" class="text-white hover:text-gray-300">Facebook</a>
+					<a href="#" class="text-white hover:text-gray-300">Twitter</a>
+					<a href="#" class="text-white hover:text-gray-300">Instagram</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
